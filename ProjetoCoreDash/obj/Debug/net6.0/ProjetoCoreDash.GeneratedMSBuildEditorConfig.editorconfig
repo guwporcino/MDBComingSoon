@@ -9,165 +9,165 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProjetoCoreDash
 build_property.RootNamespace = ProjetoCoreDash
-build_property.ProjectDir = C:\Users\gugap\Documents\GPPSD\MDBComingSoon\ProjetoCoreDash\
+build_property.ProjectDir = c:\Users\gugap\Documents\GPPSD\MDBComingSoon\ProjetoCoreDash\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\gugap\Documents\GPPSD\MDBComingSoon\ProjetoCoreDash
+build_property.MSBuildProjectDirectory = c:\Users\gugap\Documents\GPPSD\MDBComingSoon\ProjetoCoreDash
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Areas/Identity/Pages/_ViewStart.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Categorias/Create.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Categorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Categorias/Delete.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Categorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Categorias/Details.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Categorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Categorias/Edit.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Categorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Categorias/Index.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Categorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Escalas/Create.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Escalas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYWxhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Escalas/Delete.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Escalas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYWxhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Escalas/Details.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Escalas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYWxhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Escalas/Edit.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Escalas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYWxhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Escalas/Index.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Escalas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYWxhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Home/Index.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Home/Suporte.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Home/Suporte.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdXBvcnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Inscricoes/Create.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Inscricoes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpY29lc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Inscricoes/Delete.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Inscricoes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpY29lc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Inscricoes/Details.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Inscricoes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpY29lc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Inscricoes/Edit.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Inscricoes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpY29lc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Inscricoes/Index.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Inscricoes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpY29lc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Nivels/Create.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Nivels/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTml2ZWxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Nivels/Delete.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Nivels/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTml2ZWxzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Nivels/Details.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Nivels/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTml2ZWxzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Nivels/Edit.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Nivels/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTml2ZWxzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Nivels/Index.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Nivels/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTml2ZWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Shared/Error.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Shared/_LoginPartial.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/SubCategorias/Create.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/SubCategorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/SubCategorias/Delete.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/SubCategorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/SubCategorias/Details.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/SubCategorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/SubCategorias/Edit.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/SubCategorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/SubCategorias/Index.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/SubCategorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Tipos/Create.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Tipos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Tipos/Delete.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Tipos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Tipos/Details.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Tipos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Tipos/Edit.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Tipos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Tipos/Index.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Tipos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/_ViewImports.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/_ViewStart.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Shared/_Layout.cshtml]
+[c:/Users/gugap/Documents/GPPSD/MDBComingSoon/ProjetoCoreDash/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4r18j7snf2

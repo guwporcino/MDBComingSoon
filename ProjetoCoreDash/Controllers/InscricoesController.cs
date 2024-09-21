@@ -347,6 +347,7 @@ namespace ProjetoCoreDash.Controllers
                 }
                 catch(Exception e)
                 {
+                    Console.WriteLine($"Erro capturado: {e.Message}, StackTrace: {e.StackTrace}");
                     TempData["ErrorMessage"] = $"Não foi possível baixar/gerar a filipeta para este modelo. Erro: {e.Message}, StackTrace: {e.StackTrace}";
                     return RedirectToAction("Details", new { id = modelo.InscricaoId });
                 }
