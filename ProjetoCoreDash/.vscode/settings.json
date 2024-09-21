@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net6.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/d6d6460e-5cb3-442d-ad43-64a4386f4f40/resourceGroups/gppsd/providers/Microsoft.Web/sites/gppsd-dash"
+}

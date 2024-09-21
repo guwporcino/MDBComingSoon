@@ -1,0 +1,83 @@
+﻿@using ProjetoCore2.Factories;
+@using System.Text.Json;
+@model List<Modelo>
+
+@{
+    ViewData["Title"] = "Finalização";
+    ViewBag.Pendente = "N";
+}
+
+<div class="text-center">
+    @if (ViewBag.Pendente == "S")
+    {
+        <h6>Seu pagamento está em processamento, aguarde! </h6>
+        <div id="contador"></div>
+    }
+    else
+    {
+        <h6>Inscrição finalizada com sucesso! </h6>
+        <p>O documento com as identificações dos modelos foi enviado para o e-mail cadastrado. Consulte a caixa de Spam caso não visualize na caixa principal.</p>
+        <button class="btn btn-outline-primary">
+            <a href="https://gppsd.org.br" target="_blank" style="margin-bottom: 16px;">Ir para o site</a>
+        </button>
+    }
+
+    @*<button class="btn btn-outline-primary">
+    <a id="downloadLink" style="margin-bottom: 16px">Baixar Etiqueta(s)</a>
+    </button>*@
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Defina o tempo limite em segundos
+    var tempoLimite = 300;
+
+    // Função para atualizar o contador
+    function atualizarContador(segundos) {
+        document.getElementById('contador').innerHTML = 'Aguardando: ' + segundos + ' segundos';
+
+        if (segundos > 0) {
+            setTimeout(function () {
+                atualizarContador(segundos - 1);
+            }, 1000);
+        }
+    }
+
+    // Inicie o contador quando a página carregar
+    window.onload = function () {
+        atualizarContador(tempoLimite);
+    };
+</script>
+@*<script>
+    $(document).ready(function () {
+        var downloadLink = $('#downloadLink');
+        if (downloadLink.length) {
+            downloadLink.hide();
+
+            $.ajax({
+                url: '@Url.Action("DownloadEtiquetas", "Inscricoes")',
+                method: 'POST',
+                xhrFields: {
+                    responseType: 'blob'
+                },
+                success: function (response, status, xhr) {
+                    if (xhr.status === 200) {
+                        var contentType = xhr.getResponseHeader('Content-Type');
+                        var extension = contentType === 'application/zip' ? 'zip' : 'pdf';
+                        var filename = contentType === 'application/zip' ? 'etiquetas.' + extension : 'etiqueta.' + extension;
+
+                        var fileURL = URL.createObjectURL(response);
+                        downloadLink.attr('href', fileURL);
+                        downloadLink.attr('download', filename);
+                        downloadLink.show();
+                    } else {
+                        console.log('Erro ao baixar as etiquetas.');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        }
+    });
+</script>*@

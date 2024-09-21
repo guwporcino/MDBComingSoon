@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Início";
+}
+
+<div class="container">
+    <h2>Faça parte dos nossos eventos deste ano!</h2>
+    <p>Inscreva-se agora para garantir seu lugar.</p>
+
+    <div class="btn-group">
+        <a href="@Url.Action("Create", "Inscricoes", new { tipo = "p" })" class="btn btn-primary me-2">Inscrição Pulgão</a>
+        <a href="#" class="btn btn-secondary" disabled>Inscrição Convenção</a>
+    </div>
+</div>

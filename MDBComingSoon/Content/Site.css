@@ -11,19 +11,19 @@ body,
 }
 
 .top-nav-collapse {
-    background-color: #1C2331;
+    background-color: #245b4a;
 }
 
 /* Adding color to the Navbar on mobile */
 @media only screen and (max-width: 768px) {
     .navbar {
-        background-color: #1C2331;
+        background-color: #245b4a;
     }
 }
 
 /* Footer color for sake of consistency with Navbar */
 .page-footer {
-    background-color: #1C2331;
+    background-color: #245b4a;
 }
 
 #time-counter {
@@ -71,6 +71,6 @@ header,
 
 @media (min-width: 800px) and (max-width: 850px) {
     .navbar:not(.top-nav-collapse) {
-        background: #1C2331 !important;
+        background: #245b4a !important;
     }
 }

@@ -1,0 +1,44 @@
+﻿@model List<Modelo>
+
+@{
+    ViewData["Title"] = "Sucesso";
+}
+
+<div class="text-center">
+    <h6>Agora só falta um passo para finalizar a sua inscrição. </h6>
+    <p>Efetue o pagamento da sua inscrição e logo após receberá um e-mail com a etiqueta dos modelos cadastrados.</p>
+    <div id="wallet_container"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script>
+    $(document).ready(function () {
+        const mp = new MercadoPago('APP_USR-0eeaae83-9c1a-4c47-a28c-fad87a4b270a');
+        mp.bricks().create("wallet", "wallet_container", {
+            initialization: {
+                preferenceId: '@ViewData["PreferenceId"]',
+                redirectMode: "modal"
+            },
+            customization: {
+                visual: {
+                    style: {
+                        theme: "bootstrap",
+                    },
+                },
+                checkout: {
+                    theme: {
+                        elementsColor: "#4287F5",
+                        headerColor: "#4287F5",
+                    },
+                },
+                paymentMethods: {
+                    creditCard: "all",
+                    atm: "all",
+                    maxInstallments: 1
+                },
+            },
+
+        });
+    });
+</script>

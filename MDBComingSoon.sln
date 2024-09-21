@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDBComingSoon", "MDBComingSoon\MDBComingSoon.csproj", "{F3A9A6CE-6066-48F5-8A1A-4C385D6F0B6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoCore2", "ProjetoCore2\ProjetoCore2.csproj", "{9D947196-CD3D-4D95-9236-6EBF2BA3A0F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoCoreDash", "ProjetoCoreDash\ProjetoCoreDash.csproj", "{EA90EB40-9E8D-416F-AE31-CEEAFB1D1C7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F3A9A6CE-6066-48F5-8A1A-4C385D6F0B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3A9A6CE-6066-48F5-8A1A-4C385D6F0B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3A9A6CE-6066-48F5-8A1A-4C385D6F0B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3A9A6CE-6066-48F5-8A1A-4C385D6F0B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D947196-CD3D-4D95-9236-6EBF2BA3A0F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D947196-CD3D-4D95-9236-6EBF2BA3A0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D947196-CD3D-4D95-9236-6EBF2BA3A0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D947196-CD3D-4D95-9236-6EBF2BA3A0F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA90EB40-9E8D-416F-AE31-CEEAFB1D1C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA90EB40-9E8D-416F-AE31-CEEAFB1D1C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA90EB40-9E8D-416F-AE31-CEEAFB1D1C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA90EB40-9E8D-416F-AE31-CEEAFB1D1C7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,155 @@
+﻿@model IEnumerable<ProjetoCoreDash.Models.InscricaoViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<h1>Inscrições</h1>
+
+<div style="justify-content: flex-start">
+    <p style="float:left">
+        <a href="@Url.Action("GerarRelatorio", "Inscricoes")">Baixar relatório em .xlsx</a>
+    </p>
+    <p style="float: right">
+        Registros retornados: @Model.Count()
+    </p>
+</div>
+
+@using (Html.BeginForm("Index", "Inscricoes", FormMethod.Post))
+{
+    <div class="container" style="margin-top: 64px; margin-bottom: 64px">
+        <div class="form-group">
+            <label for="searchInput">Pesquisar por:</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="searchType" id="searchTypeNome" value="nome" checked>
+                <label class="form-check-label" for="searchTypeNome">
+                    Nome
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="searchType" id="searchTypeIdModelista" value="idModelista">
+                <label class="form-check-label" for="searchTypeIdModelista">
+                    ID do Modelista
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="searchType" id="searchTypeIdModelo" value="idModelo">
+                <label class="form-check-label" for="searchTypeIdModelo">
+                    ID do Modelo
+                </label>
+            </div>
+        </div>
+
+        <!-- Campo para Nome -->
+        <div id="divSearchNome" class="form-group">
+            <label for="searchInputNome">Digite o Nome:</label>
+            <input type="text" name="searchString" class="form-control" id="searchInputNome" placeholder="Ex: João da Silva">
+        </div>
+
+        <!-- Campo para ID do Modelista -->
+        <div id="divSearchIdModelista" class="form-group" style="display: none;">
+            <label for="searchInputIdModelista">Digite o ID do Modelista:</label>
+            <input type="number" name="searchIdModelista" class="form-control" id="searchInputIdModelista" placeholder="Ex: 8">
+        </div>
+
+        <!-- Campo para ID do Modelo -->
+        <div id="divSearchIdModelo" class="form-group" style="display: none;">
+            <label for="searchInputIdModelo">Digite o ID do Modelo:</label>
+            <input type="number" name="searchIdModelo" class="form-control" id="searchInputIdModelo" placeholder="Ex: 8">
+        </div>
+
+        <!-- Campo para Ano de Inscrição (Sempre Visível) -->
+        <div id="divSearchAnoInscricao" class="form-group">
+            <label for="searchInputAnoInscricao">Selecione o Ano de Inscrição:</label>
+            <select name="searchAnoInscricao" class="form-control" id="searchInputAnoInscricao">
+                <option value="">Selecione o Ano</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+            </select>
+        </div>
+
+        <!-- Campo para Tipo de Evento (Sempre Visível) -->
+        <div id="divSearchTipoEvento" class="form-group">
+            <label for="searchInputTipoEvento">Selecione o Tipo de Evento:</label>
+            <select name="searchTipoEvento" class="form-control" id="searchInputTipoEvento">
+                <option value="">Selecione o Tipo</option>
+                <option value="Pulgão">Pulgão</option>
+                <option value="Convenção">Convenção</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+        <button type="button" class="btn btn-secondary" id="btnLimparFiltros">Limpar</button>
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                Quantidade de Modelos
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @item.QuantidadeModelos
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.IdInscricao">Visualizar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        $('input[type="radio"][name="searchType"]').change(function () {
+            // Esconde todos os campos principais
+            $('#divSearchNome, #divSearchIdModelo, #divSearchIdModelista').hide();
+
+            // Exibe o campo correspondente ao tipo de pesquisa selecionado
+            if (this.value === 'nome') {
+                $('#divSearchNome').show();
+            } else if (this.value === 'idModelo') {
+                $('#divSearchIdModelo').show();
+            } else if (this.value === 'idModelista') {
+                $('#divSearchIdModelista').show();
+            }
+        });
+
+        // Limpar todos os campos de entrada
+        $('#btnLimparFiltros').click(function () {
+            $('#searchInputNome').val('');
+            $('#searchInputIdModelo').val('');
+            $('#searchInputIdModelista').val('');
+            $('#searchInputAnoInscricao').val('');
+            $('#searchInputTipoEvento').val('');
+
+            // Define a pesquisa por Nome como padrão
+            $('#searchTypeNome').prop('checked', true);
+
+            // Mostra os campos padrão
+            $('#divSearchNome').show();
+            $('#divSearchIdModelo, #divSearchIdModelista').hide();
+        });
+    });
+</script>

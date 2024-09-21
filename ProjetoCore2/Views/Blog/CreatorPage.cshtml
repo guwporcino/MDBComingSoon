@@ -1,0 +1,24 @@
+﻿@using ProjetoCore2.Models
+@model BlogEntry
+
+@{
+    ViewData["Title"] = "Criar nova notícia";
+}
+
+<link href="~/css/froala_editor.pkgd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="~/js/froala_editor.pkgd.min.js"></script>
+
+<h5 class="mb-4">Criar nova notícia</h5>
+
+<div>
+    <form action="CreatorPage" method="post">
+        <input hidden asp-for="Id" />
+        <textarea asp-for=Conteudo name="conteudo" id="myEditor"></textarea>
+        <button class="btn btn-secondary mt-4">Salvar</button>
+    </form>
+    <script>
+        var editor = new FroalaEditor("#myEditor", {
+            toolbarButtons: { 'moreText': { 'buttons': ['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'fontFamily', 'fontSize', 'textColor', 'backgroundColor', 'inlineClass', 'inlineStyle', 'clearFormatting'] }, 'moreParagraph': { 'buttons': ['alignLeft', 'alignCenter', 'formatOLSimple', 'alignRight', 'alignJustify', 'formatOL', 'formatUL', 'paragraphFormat', 'paragraphStyle', 'lineHeight', 'outdent', 'indent', 'quote'] }, 'moreRich': { 'buttons': ['insertLink', 'insertImage', 'insertVideo', 'insertTable', 'emoticons', 'fontAwesome', 'specialCharacters', 'embedly', 'insertFile', 'insertHR'] }, 'moreMisc': { 'buttons': ['undo', 'redo', 'fullscreen', 'print', 'getPDF', 'spellChecker', 'selectAll', 'html', 'help'] } }
+        });
+    </script>
+</div>

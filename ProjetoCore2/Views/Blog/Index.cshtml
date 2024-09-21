@@ -1,0 +1,23 @@
+﻿@using ProjetoCore2.Models;
+@model List<BlogEntry>
+
+@{
+    ViewData["Title"] = "Notícias";
+}
+
+<h2>Notícias</h2>
+<hr />
+
+<div>
+    @foreach (BlogEntry post in @Model)
+    {
+        <div class="card mb-2">
+            <div class="card-body">
+                @Html.Raw(@post.Conteudo)
+            </div>
+            <div class="card-footer">
+                @Html.ActionLink("Edit", "CreatorPage", new {Id = @post.Id}, new {@class="btn btn-sm btn-secondary"})
+            </div>
+        </div>
+    }
+</div>

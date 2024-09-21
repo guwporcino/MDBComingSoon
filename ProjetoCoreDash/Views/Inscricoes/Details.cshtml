@@ -1,0 +1,93 @@
+﻿@model ProjetoCoreDash.Models.Inscricao
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<h1>Visualizar</h1>
+
+<div>
+    <h4>Dados pessoais</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pessoa.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pessoa.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pessoa.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pessoa.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pessoa.Cpf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pessoa.Cpf)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pessoa.Telefone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pessoa.Telefone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pessoa.Nivel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pessoa.Nivel.Descricao)
+        </dd>
+    </dl>
+    @if (Model.Modelos.Count > 0)
+    {
+        <div>
+            <h4>Modelos cadastrados</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id do modelo</th>
+                        <th>Descrição do modelo</th>
+                        <th>Escala</th>
+                        <th>Fabricante</th>
+                        <th>Tipo</th>
+                        <th>Filipeta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var modelo in Model.Modelos)
+                    {
+                        <tr>
+                            <td class="col-sm-2">@modelo.Id</td>
+                            <td class="col-sm-2">@modelo.Descricao</td>
+                            <td class="col-sm-2">@modelo.Escala.Descricao</td>
+                            <td class="col-sm-2">@modelo.Fabricante</td>
+                            <td class="col-sm-2">@modelo.Tipo.Descricao</td>
+                            <td class="col-sm-2"><a href="@Url.Action("BaixarFilipeta", new { modeloId = modelo.Id })">Baixar/Gerar filipeta</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div>
+            <h4>Não há modelos cadastrados</h4>
+        </div>
+    }
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Listar todos</a>
+</div>

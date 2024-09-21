@@ -30,4 +30,12 @@ namespace MDBComingSoon.Models
             return new ApplicationDbContext();
         }
     }
+
+    public class InscricaoContext : DbContext
+    {
+        public DbSet<InscricaoViewModel> Inscricoes { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Modelo> Modelos { get; set; }
+        public DbSet<Tipo> Tipos { get; set; }
+    }
 }

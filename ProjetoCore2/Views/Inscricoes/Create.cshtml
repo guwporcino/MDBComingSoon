@@ -1,0 +1,300 @@
+﻿@model ProjetoCore2.Models.Inscricao
+
+@{
+    ViewData["Title"] = "Realizar Inscrição";
+}
+
+<h1>Realizar Inscrição</h1>
+
+@using (Html.BeginForm("Create", "Inscricoes", FormMethod.Post, new { id = "inscricaoForm" }))
+{
+    <div>
+        <h4>Dados da Pessoa</h4>
+        <div>
+            <label asp-for="Pessoa.Nome">Nome completo</label>
+            <input asp-for="Pessoa.Nome" class="form-control" />
+            <span class="text-danger static-validation field-validation-valid" data-validation-for="Pessoa.Nome"></span>
+        </div>
+        <div>
+            <label asp-for="Pessoa.Email">E-mail</label>
+            <input asp-for="Pessoa.Email" class="form-control" />
+            <span class="text-danger static-validation field-validation-valid" data-validation-for="Pessoa.Email"></span>
+        </div>
+        <div>
+            <label asp-for="Pessoa.Cpf">CPF</label>
+            <input asp-for="Pessoa.Cpf" class="form-control" />
+            <span class="text-danger static-validation field-validation-valid" data-validation-for="Pessoa.Cpf"></span>
+        </div>
+        <div>
+            <label asp-for="Pessoa.Telefone">Celular com DDD</label>
+            <input asp-for="Pessoa.Telefone" class="form-control" maxlength="15" />
+            <span class="text-danger static-validation field-validation-valid" data-validation-for="Pessoa.Telefone"></span>
+        </div>
+        <div>
+            <label asp-for="Pessoa.NivelId">Nível do modelista</label>
+            <select asp-for="Pessoa.NivelId" asp-items="ViewBag.NivelId" class="form-control">
+                <option value="">-- Selecione --</option>
+            </select>
+            <span class="text-danger static-validation field-validation-valid" data-validation-for="Pessoa.NivelId"></span>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h4>Modelos</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Descrição do Modelo</th>
+                    <th>Escala</th>
+                    <th>Fabricante</th>
+                    <th>Tipo</th>
+                    <th>Categoria</th>
+                    <th>Subcategoria</th>
+                </tr>
+            </thead>
+            <tbody id="modelosContainer">
+                <tr>
+                    <td>
+                        <input asp-for="Modelos[0].Descricao" class="form-control" />
+                        <span class="text-danger static-validation field-validation-valid" data-validation-for="Modelos[0].Descricao"></span>
+                    </td>
+                    <td>
+                        <select asp-for="Modelos[0].EscalaId" asp-items="ViewBag.Escalas" class="form-control">
+                            <option value="">-- Selecione --</option>
+                        </select>
+                        <span class="text-danger static-validation field-validation-valid" data-validation-for="Modelos[0].EscalaId"></span>
+                    </td>
+                    <td>
+                        <input asp-for="Modelos[0].Fabricante" class="form-control" />
+                        <span class="text-danger static-validation field-validation-valid" data-validation-for="Modelos[0].Fabricante"></span>
+                    </td>
+                    <td>
+                        <select asp-for="Modelos[0].TipoId" asp-items="ViewBag.Tipos" class="form-control">
+                            <option value="">-- Selecione --</option>
+                        </select>
+                        <span class="text-danger static-validation field-validation-valid" data-validation-for="Modelos[0].TipoId"></span>
+                    </td>
+                    <td>
+                        <select asp-for="Modelos[0].SubCategoria.CategoriaId" asp-items="ViewBag.Categorias" class="form-control category-select">
+                            <option value="">-- Selecione --</option>
+                        </select>
+                        <span class="text-danger static-validation field-validation-valid" data-validation-for="Modelos[0].SubCategoria.CategoriaId"></span>
+                    </td>
+                    <td>
+                        <select asp-for="Modelos[0].SubCategoriaId" class="form-control subcategory-select" disabled>
+                            <option value="">-- Selecione uma Categoria --</option>
+                        </select>
+                        <span class="text-danger static-validation field-validation-valid" data-validation-for="Modelos[0].SubCategoriaId"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="addModelButton" type="button" class="btn btn-primary">Adicionar Modelo</button>
+        <button id="removeModelButton" type="button" class="btn btn-danger">Remover Modelo</button>
+    </div>
+
+    <div class="mt-4">
+        <input type="button" id="submitButton" value="Ir para o pagamento" class="btn btn-primary"/>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        var escalas = @Html.Raw(ViewBag.EscalasJson);
+        var tipos = @Html.Raw(ViewBag.TiposJson);
+        var categorias = @Html.Raw(ViewBag.CategoriasJson);
+        var subCategorias = @Html.Raw(ViewBag.SubCategoriasJson);
+
+        $('#submitButton').on('click', function () {
+            // Serializar os dados do formulário em um formato adequado para o envio via AJAX
+            var formData = $('#inscricaoForm').serialize();
+
+            $('span.text-danger').empty();
+
+            // Enviar a requisição AJAX
+            $.ajax({
+                url: '/Inscricoes/Create', // URL para o método Create no controller
+                type: 'POST',
+                data: formData,
+                success: function (response) {
+                    // Manipular a resposta do servidor aqui
+                    if (response.isValid) {
+                        // Redirecionar para a página de sucesso, por exemplo
+                        window.location.href = '/Inscricoes/Success';
+                    } else {
+                        for (var field in response.errors) {
+                            var errorMessage = response.errors[field];
+                            var errorSpanStatic = $('span.static-validation[data-validation-for="' + field + '"]');
+                            errorSpanStatic.text(errorMessage);
+                            var errorSpan = $('span[asp-validation-for="' + field + '"]');
+                            errorSpan.text(errorMessage);
+                        }
+                    }
+                },
+                error: function () {
+                    // Tratar erro da requisição AJAX aqui
+                    console.log('Erro ao enviar o formulário via AJAX.');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var modelIndex = 1;
+
+            $('#addModelButton').on('click', function () {
+                var newRowHtml = '<tr>' +
+                    '<td>' +
+                    '<input name="Modelos[' + modelIndex + '].Descricao" class="form-control" />' +
+                    '<span asp-validation-for="Modelos[' + modelIndex + '].Descricao" class="text-danger"></span>' +
+                    '</td>' +
+                    '<td>' +
+                    '<select name="Modelos[' + modelIndex + '].EscalaId" class="form-control">' +
+                    '<option value="">-- Selecione --</option>';
+
+                // Iterar sobre as opções de Escalas
+                escalas.forEach(function (escala) {
+                    newRowHtml += '<option value="' + escala.Value + '">' + escala.Text + '</option>';
+                });
+
+                newRowHtml += '</select>' +
+                    '<span asp-validation-for="Modelos[' + modelIndex + '].EscalaId" class="text-danger"></span>' +
+                    '</td>' +
+                    '<td>' +
+                    '<input name="Modelos[' + modelIndex + '].Fabricante" class="form-control" />' +
+                    '<span asp-validation-for="Modelos[' + modelIndex + '].Fabricante" class="text-danger"></span>' +
+                    '</td>' +
+                    '<td>' +
+                    '<select name="Modelos[' + modelIndex + '].TipoId" class="form-control">' +
+                    '<option value="">-- Selecione --</option>';
+
+                // Iterar sobre as opções de Tipos
+                tipos.forEach(function (tipo) {
+                    newRowHtml += '<option value="' + tipo.Value + '">' + tipo.Text + '</option>';
+                });
+
+                newRowHtml += '</select>' +
+                    '<span asp-validation-for="Modelos[' + modelIndex + '].TipoId" class="text-danger"></span>' +
+                    '</td>' +
+                    '<td>' +
+                    '<select name="Modelos[' + modelIndex + '].SubCategoria.CategoriaId" class="form-control category-select">' +
+                    '<option value="">-- Selecione --</option>';
+
+                // Iterar sobre as opções de Categorias
+                categorias.forEach(function (categoria) {
+                    newRowHtml += '<option value="' + categoria.Value + '">' + categoria.Text + '</option>';
+                });
+
+                newRowHtml += '</select>' +
+                    '<span asp-validation-for="Modelos[' + modelIndex + '].SubCategoria.CategoriaId" class="text-danger"></span>' +
+                    '</td>' +
+                    '<td>' +
+                    '<select name="Modelos[' + modelIndex + '].SubCategoriaId" class="form-control subcategory-select" disabled>' +
+                    '<option value="">-- Selecione uma Categoria --</option>' +
+                    '</select>' +
+                    '<span asp-validation-for="Modelos[' + modelIndex + '].SubCategoriaId" class="text-danger"></span>' +
+                    '</td>' +
+                    '</tr>';
+
+                $('#modelosContainer').append(newRowHtml);
+                modelIndex++;
+            });
+
+            $('#removeModelButton').on('click', function () {
+                if (modelIndex > 1) {
+                    $('#modelosContainer tr:last').remove();
+                    modelIndex--;
+                }
+            });
+
+            var cpfInputs = document.querySelectorAll('input[name^="Pessoa.Cpf"]');
+            cpfInputs.forEach(function (cpfInput) {
+                cpfInput.addEventListener('input', function (event) {
+                    var inputValue = event.target.value;
+                    var numbersOnly = inputValue.replace(/\D/g, '');
+                    var formattedValue = formatCpf(numbersOnly);
+                    event.target.value = formattedValue;
+                });
+            });
+
+            function formatCpf(cpf) {
+                var formattedCpf = '';
+                if (cpf.length >= 4) {
+                    formattedCpf += cpf.substring(0, 3) + '.';
+                    formattedCpf += cpf.substring(3, 6) + '.';
+                    formattedCpf += cpf.substring(6, 9) + '-';
+                    formattedCpf += cpf.substring(9, 11);
+                } else {
+                    formattedCpf = cpf;
+                }
+                return formattedCpf;
+            }
+
+            var nomeInput = document.querySelector('input[name="Pessoa.Nome"]');
+            nomeInput.addEventListener('blur', function (event) {
+                var inputValue = event.target.value.trim();
+                var isValid = validarNomeCompleto(inputValue);
+                if (!isValid) {
+                    event.target.classList.add('invalid');
+                } else {
+                    event.target.classList.remove('invalid');
+                }
+            });
+
+            function validarNomeCompleto(nome) {
+                var nomes = nome.split(' ');
+                return nomes.length > 1;
+            }
+
+            var telefoneInputs = document.querySelectorAll('input[name^="Pessoa.Telefone"]');
+            telefoneInputs.forEach(function (telefoneInput) {
+                telefoneInput.addEventListener('input', function (event) {
+                    var inputValue = event.target.value;
+                    var numbersOnly = inputValue.replace(/\D/g, '');
+                    var formattedValue = formatTelefone(numbersOnly);
+                    event.target.value = formattedValue;
+                });
+            });
+
+            function formatTelefone(telefone) {
+                var formattedTelefone = '';
+                if (telefone.length >= 10) {
+                    formattedTelefone += '(' + telefone.substring(0, 2) + ') ';
+                    formattedTelefone += telefone.substring(2, 6) + '-';
+                    formattedTelefone += telefone.substring(6, 10);
+                    if (telefone.length > 10) {
+                        formattedTelefone += telefone.substring(10);
+                    }
+                } else {
+                    formattedTelefone = telefone;
+                }
+                return formattedTelefone;
+            }
+
+            $(document).on('change', '.category-select', function () {
+                var selectedCategory = $(this).val();
+                var $subcategorySelect = $(this).closest('tr').find('.subcategory-select');
+                $subcategorySelect.empty().prop('disabled', true);
+
+                if (selectedCategory) {
+                    $.ajax({
+                        url: '/Inscricoes/GetSubCategorias',
+                        type: 'POST',
+                        data: { categoriaId: selectedCategory },
+                        success: function (subcategories) {
+                            console.log(subcategories);
+                            subcategories.forEach(function (subCategoria) {
+                                $subcategorySelect.append('<option value="' + subCategoria.id + '">' + subCategoria.descricao + '</option>');
+                            });
+
+                            $subcategorySelect.prop('disabled', false);
+                        },
+                        error: function () {
+                            console.log('Erro ao obter as subcategorias.');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}
